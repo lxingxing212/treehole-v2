@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信管班级树洞 | 匿名留言板</title>
+    <link rel="stylesheet" href="style.css"> <!-- 相对路径，适配学号路由 -->
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>🌲 班级树洞 <span class="subtitle">说说你的心里话</span></h1>
+        </div>
+    </header>
+    <main class="container">
+        <section class="input-card">
+            <div class="card-header">
+                <h3>📝 我要留言</h3>
+            </div>
+            <div class="card-body">
+                <!-- 新增：昵称输入框 -->
+                <input type="text" id="nicknameInput" placeholder="请输入你的昵称（必填）" class="nickname-input">
+                <textarea id="msgInput" placeholder="在这里写下你想说的话...（最多200字）" maxlength="200"></textarea>
+                <div class="action-bar">
+                    <span id="charCount">0/200</span>
+                    <button id="sendBtn" class="btn-primary">发送留言 🚀</button>
+                </div>
+            </div>
+        </section>
+        <section class="message-area">
+            <div class="list-header">
+                <h2>最新动态</h2>
+                <span class="refresh-tip">自动同步中...</span>
+            </div>
+            <ul id="msgList" class="message-list">
+                <!-- JS 动态插入留言 -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 信管班级个性化树洞 | 《Web开发技术》</p>
+    </footer>
+    <script src="script.js"></script> <!-- 相对路径，适配学号路由 -->
+</body>
+</html>
